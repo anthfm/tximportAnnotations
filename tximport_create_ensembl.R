@@ -16,7 +16,7 @@ features <- rtracklayer::import('/Users/anthmam/Desktop/Projects/BHK/ORCESTRA/Tr
 features_gene = as.data.frame(features)
 features_gene = features_gene[which(features_gene$type == "gene"),]
 #features_df <- features_df[order(match(features_df$transcript_id,tx2gene$TXNAME)),]
-remove <- c("hgnc_id","transcript_id","transcript_support_level","transcript_type","transcript_name","transcript_version","transcript_source","havana_transcript","transcript_biotype" ,"ccds_id","protein_version","ont", "protein_id","exon_id", "exon_number", "exon_version")
+remove <- c("hgnc_id","transcript_id","transcript_support_level","transcript_type","tag","transcript_name","transcript_version","transcript_source","havana_transcript","transcript_biotype" ,"ccds_id","protein_version","ont", "protein_id","exon_id", "exon_number", "exon_version")
 features_gene <- features_gene[,!names(features_gene) %in% remove]
 rownames(features_gene) <- features_gene$gene_id
 
